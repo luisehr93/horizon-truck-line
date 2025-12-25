@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HORIZON TRUCK LINE LLC</title>
-  <meta name="description" content="HORIZON TRUCK LINE LLC. Linehaul y logística desde Las Vegas, NV. Operación bilingüe, enfocada en cumplimiento, seguridad y reportes profesionales.">
+  <title>HORIZON TRUCK LINE LLC · Flatbed · Oversize · Linehaul</title>
+
+  <!-- SEO -->
+  <meta name="description" content="HORIZON TRUCK LINE LLC. Flatbed, oversize y linehaul desde Las Vegas, NV. Operación bilingüe, enfoque en cumplimiento, seguridad y comunicación profesional." />
+  <meta name="theme-color" content="#050505" />
+
   <style>
     :root {
       --bg-main: #050505;
@@ -16,86 +20,857 @@
       --max-width: 1100px;
       --radius: 10px;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      background:radial-gradient(circle at top,#222 0,#050505 45%,#000 100%);
-      color:var(--text-main);line-height:1.6
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #222 0, #050505 45%, #000 100%);
+      color: var(--text-main);
+      line-height: 1.6;
     }
-    a{color:inherit;text-decoration:none}
-    header{border-bottom:1px solid #222;background:rgba(0,0,0,.95);position:sticky;top:0;z-index:20}
-    .nav-container{max-width:var(--max-width);margin:0 auto;padding:.8rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
-    .brand{display:flex;align-items:center;gap:.8rem}
-    .brand-logo{width:52px;height:52px;border-radius:50%;border:1px solid rgba(212,175,55,.6);display:flex;align-items:center;justify-content:center;color:#d4af37;font-size:.7rem}
-    nav ul{list-style:none;display:flex;gap:1.5rem;font-size:.9rem;text-transform:uppercase;letter-spacing:.12em}
-    main{max-width:var(--max-width);margin:0 auto;padding:1.5rem}
-    .hero{padding:2.5rem 0}
-    h1{text-transform:uppercase;letter-spacing:.14em}
-    .btn-primary{border-radius:999px;padding:.65rem 1.5rem;font-size:.85rem;text-transform:uppercase;letter-spacing:.14em;border:none;background:linear-gradient(135deg,#d4af37,#ffcc33);cursor:pointer}
-    section{margin-top:2.5rem}
-    .contact-card{background:#050505;border-radius:var(--radius);border:1px solid rgba(212,175,55,.25);padding:1.5rem}
-    form{display:grid;gap:.7rem}
-    label{font-size:.75rem;text-transform:uppercase;letter-spacing:.14em;color:var(--text-muted)}
-    input,textarea{width:100%;border-radius:7px;border:1px solid rgba(255,255,255,.12);padding:.55rem;background:#050505;color:#fff}
-    footer{margin-top:3rem;padding:1.5rem;color:var(--text-muted);font-size:.8rem;border-top:1px solid #151515}
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid #222;
+      background: rgba(0, 0, 0, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+    }
+
+    .nav-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.8rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .brand-logo {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1px solid rgba(212, 175, 55, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: radial-gradient(circle, #333 0, #000 70%);
+    }
+
+    .brand-title {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .brand-title span:first-child {
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+
+    .brand-title span:last-child {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    nav a {
+      position: relative;
+      padding-bottom: 0.1rem;
+      color: var(--text-muted);
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--accent));
+      transition: width 0.2s ease-out;
+    }
+
+    nav a:hover::after { width: 100%; }
+    nav a:hover { color: var(--text-main); }
+
+    .lang-toggle {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      display: flex;
+      overflow: hidden;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      background: rgba(10, 10, 10, 0.85);
+    }
+
+    .lang-toggle button {
+      background: none;
+      border: none;
+      padding: 0.35rem 0.9rem;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .lang-toggle button.active {
+      background: linear-gradient(135deg, #2a220b, #463307);
+      color: var(--gold);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.6fr);
+      gap: 2.2rem;
+      align-items: center;
+      padding: 2.5rem 0 1rem;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(2.1rem, 3vw + 1rem, 3.1rem);
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-copy h1 span { display: block; }
+
+    .hero-copy h1 .highlight {
+      background: linear-gradient(90deg, var(--gold), var(--accent));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      max-width: 34rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-bottom: 1.3rem;
+    }
+
+    .badge {
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      padding: 0.3rem 0.9rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      background: radial-gradient(circle at top, rgba(212, 175, 55, 0.18), transparent 55%);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      border-radius: 999px;
+      padding: 0.65rem 1.5rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.15s ease-out, box-shadow 0.15s ease-out,
+      background 0.15s ease-out, border-color 0.15s ease-out;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #d4af37, #ffcc33);
+      color: #1a1a1a;
+      box-shadow: 0 0 25px rgba(255, 204, 51, 0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 36px rgba(255, 204, 51, 0.3);
+    }
+
+    .btn-secondary {
+      background: rgba(10, 10, 10, 0.8);
+      border-color: rgba(255, 255, 255, 0.16);
+      color: var(--text-main);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(25, 25, 25, 0.9);
+      transform: translateY(-1px);
+      border-color: rgba(212, 175, 55, 0.6);
+    }
+
+    .hero-meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .hero-visual {
+      background: radial-gradient(circle at top, #2b230c, #050505 45%, #000 100%);
+      border-radius: var(--radius);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      padding: 1.5rem 1.5rem 1.2rem;
+      box-shadow: 0 35px 60px rgba(0, 0, 0, 0.8);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(255, 255, 255, 0.18), transparent 60%);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .logo-frame {
+      border-radius: calc(var(--radius) - 2px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.7);
+      position: relative;
+    }
+
+    .logo-placeholder {
+      aspect-ratio: 16 / 9;
+      border-radius: calc(var(--radius) - 4px);
+      border: 1px dashed rgba(212, 175, 55, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .logo-placeholder span { z-index: 2; }
+
+    .logo-placeholder::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top, #3a2b0b 0, transparent 65%),
+        radial-gradient(circle at bottom, #111 0, #000 60%);
+      opacity: 0.85;
+    }
+
+    .hero-visual-footer {
+      margin-top: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 0.6rem;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 0.2rem 0.8rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    /* Sections */
+    section { margin-top: 2.6rem; }
+    .section-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+    .section-title {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 0.8rem;
+    }
+    .section-grid {
+      display: grid;
+      gap: 1.4rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .card {
+      background: linear-gradient(145deg, #0c0c0c, #050505);
+      border-radius: var(--radius);
+      padding: 1.2rem 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .card h3 {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.4rem;
+    }
+    .card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+    .card small {
+      font-size: 0.72rem;
+      color: #777777;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.6rem;
+      align-items: flex-start;
+    }
+
+    .list {
+      list-style: none;
+      display: grid;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .list li::before {
+      content: "▹";
+      color: var(--gold);
+      margin-right: 0.4rem;
+    }
+
+    /* Contact */
+    .contact-card {
+      background: radial-gradient(circle at top, #262018, #050505 45%, #000 100%);
+      border-radius: var(--radius);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      padding: 1.4rem 1.2rem 1.5rem;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr);
+    }
+
+    .contact-card h3 {
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 0.6rem;
+    }
+
+    .contact-meta {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      gap: 0.35rem;
+      font-size: 0.85rem;
+    }
+
+    .contact-item-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+    }
+
+    .contact-item-value { font-size: 0.9rem; }
+
+    form { display: grid; gap: 0.7rem; }
+
+    label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      border-radius: 7px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 0.55rem 0.6rem;
+      background: rgba(5, 5, 5, 0.95);
+      color: var(--text-main);
+      font-size: 0.88rem;
+      outline: none;
+      transition: border-color 0.15s ease-out, box-shadow 0.15s ease-out;
+    }
+
+    textarea { min-height: 110px; resize: vertical; }
+
+    input:focus, textarea:focus {
+      border-color: rgba(212, 175, 55, 0.7);
+      box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.25);
+    }
+
+    .note {
+      margin-top: 0.4rem;
+      font-size: 0.74rem;
+      color: #b3b3b3;
+    }
+
+    footer {
+      border-top: 1px solid #151515;
+      margin-top: 2.8rem;
+      padding: 1.4rem 1.5rem 1.6rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: radial-gradient(circle at bottom, #151515, #050505 55%, #000 100%);
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer-right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+    }
+
+    .dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--gold);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-visual { order: -1; }
+      .section-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .two-column { grid-template-columns: 1fr; }
+      .contact-card { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      nav ul { display: none; }
+      main { padding: 1.2rem; }
+      .section-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
-<body>
 
+<body>
 <header>
   <div class="nav-container">
     <div class="brand">
-      <div class="brand-logo">HZ</div>
-      <strong>HORIZON TRUCK LINE LLC</strong>
+      <div class="brand-logo" aria-hidden="true">
+        <span style="font-size: 0.6rem; letter-spacing: 0.2em; color: #d4af37;">HZ</span>
+      </div>
+      <div class="brand-title">
+        <span>HORIZON TRUCK LINE LLC</span>
+        <span>Flatbed · Oversize · Linehaul</span>
+      </div>
     </div>
-    <nav>
+
+    <nav aria-label="Primary navigation">
       <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#operaciones">Operaciones</a></li>
+        <li><a href="#disponibilidad">Disponibilidad</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
+
+    <div class="lang-toggle" aria-label="Language selector">
+      <button id="btn-es" class="active" type="button">ES</button>
+      <button id="btn-en" type="button">EN</button>
+    </div>
   </div>
 </header>
 
 <main>
-  <section class="hero">
-    <h1>Linehaul confiable<br>Visión a largo plazo</h1>
-    <p>Operación profesional desde Las Vegas, NV.</p>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-copy">
+      <h1>
+        <span class="highlight">Flatbed & Oversize</span>
+        <span data-es>Capacidad real. Cumplimiento. Comunicación directa.</span>
+        <span data-en style="display:none;">Real capacity. Compliance. Direct communication.</span>
+      </h1>
+
+      <p class="hero-subtitle" data-es>
+        Operación basada en <b>Las Vegas, NV</b>. Nos enfocamos en <b>flatbed</b>, cargas especiales y linehaul con
+        mentalidad de <b>máxima disponibilidad</b>: equipo listo, documentación en orden y entregas sin sorpresas.
+      </p>
+      <p class="hero-subtitle" data-en style="display:none;">
+        Based in <b>Las Vegas, NV</b>. We focus on <b>flatbed</b>, specialized/oversize freight, and linehaul with a
+        <b>uptime mindset</b>: ready equipment, clean documentation, and zero surprises.
+      </p>
+
+      <div class="hero-badges">
+        <span class="badge" data-es>Flatbed / plataforma</span>
+        <span class="badge" data-es>Oversize & cargas especiales</span>
+        <span class="badge" data-es>Expedited (cuando aplica)</span>
+
+        <span class="badge" data-en style="display:none;">Flatbed</span>
+        <span class="badge" data-en style="display:none;">Oversize & specialized</span>
+        <span class="badge" data-en style="display:none;">Expedited (when needed)</span>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#contacto" class="btn-primary">
+          <span data-es>Solicitar capacidad</span>
+          <span data-en style="display:none;">Request capacity</span>
+        </a>
+        <a href="#servicios" class="btn-secondary">
+          <span data-es>Ver servicios</span>
+          <span data-en style="display:none;">View services</span>
+        </a>
+
+        <span class="hero-meta" data-es>Operación profesional · Cumplimiento · Reporte claro</span>
+        <span class="hero-meta" data-en style="display:none;">Professional operation · Compliance · Clear reporting</span>
+      </div>
+    </div>
+
+    <aside class="hero-visual" aria-label="Brand & capability panel">
+      <div class="logo-frame">
+        <div class="logo-placeholder">
+          <span data-es>Flatbed · Oversize · Linehaul</span>
+          <span data-en style="display:none;">Flatbed · Oversize · Linehaul</span>
+        </div>
+      </div>
+      <div class="hero-visual-footer">
+        <span data-es>Enfoque: durabilidad, potencia y operación “lista para trabajar”.</span>
+        <span data-en style="display:none;">Focus: durability, power, and an “always ready” operation.</span>
+        <span class="tag" data-es>Profesional · Bilingüe</span>
+        <span class="tag" data-en style="display:none;">Professional · Bilingual</span>
+      </div>
+    </aside>
   </section>
 
+  <!-- SERVICES -->
+  <section id="servicios">
+    <p class="section-label" data-es>Servicios principales</p>
+    <p class="section-label" data-en style="display:none;">Core services</p>
+
+    <h2 class="section-title" data-es>Lo más importante de nuestra operación</h2>
+    <h2 class="section-title" data-en style="display:none;">What matters most in our operation</h2>
+
+    <div class="section-grid">
+      <article class="card">
+        <h3 data-es>Flatbed / plataforma</h3>
+        <h3 data-en style="display:none;">Flatbed</h3>
+        <p data-es>
+          Transporte de carga en plataforma con enfoque en sujeción, peso correcto y protección del material.
+          Ideal para acero, construcción, equipos y cargas irregulares.
+        </p>
+        <p data-en style="display:none;">
+          Flatbed freight with a focus on securement, proper weight, and freight protection—ideal for steel,
+          construction materials, equipment, and irregular loads.
+        </p>
+        <small data-es>Sujeción seria · Checklist de seguridad</small>
+        <small data-en style="display:none;">Securement discipline · Safety checklist</small>
+      </article>
+
+      <article class="card">
+        <h3 data-es>Oversize & cargas especiales</h3>
+        <h3 data-en style="display:none;">Oversize & specialized loads</h3>
+        <p data-es>
+          Planeación por ruta, dimensiones, permisos (cuando aplican) y coordinación clara. Para cargas grandes,
+          pesadas o sensibles al manejo.
+        </p>
+        <p data-en style="display:none;">
+          Route planning, dimensions review, permits (when applicable), and clear coordination—for large, heavy,
+          or handling-sensitive freight.
+        </p>
+        <small data-es>Planificación · Riesgo controlado</small>
+        <small data-en style="display:none;">Planning · Risk controlled</small>
+      </article>
+
+      <article class="card">
+        <h3 data-es>Servicio rápido cuando se necesita</h3>
+        <h3 data-en style="display:none;">Expedited when it counts</h3>
+        <p data-es>
+          Cuando el cliente lo requiere, ajustamos ventanas y comunicación para responder con velocidad sin
+          comprometer cumplimiento.
+        </p>
+        <p data-en style="display:none;">
+          When the customer requires it, we adjust windows and communication to move fast—without compromising compliance.
+        </p>
+        <small data-es>Velocidad con control</small>
+        <small data-en style="display:none;">Speed with control</small>
+      </article>
+    </div>
+  </section>
+
+  <!-- OPERATIONS -->
+  <section id="operaciones">
+    <p class="section-label" data-es>Operación & estándares</p>
+    <p class="section-label" data-en style="display:none;">Operations & standards</p>
+
+    <h2 class="section-title" data-es>Listos para trabajar, todos los días</h2>
+    <h2 class="section-title" data-en style="display:none;">Ready to work—every day</h2>
+
+    <div class="two-column">
+      <div>
+        <ul class="list">
+          <li data-es>Enfoque en disponibilidad: mantenimiento y condición de unidades para evitar paros.</li>
+          <li data-en style="display:none;">Uptime mindset: maintenance and equipment readiness to avoid downtime.</li>
+
+          <li data-es>Documentación ordenada: auditorías, contabilidad, carrier packets y cumplimiento.</li>
+          <li data-en style="display:none;">Clean documentation: audits, accounting, carrier packets, and compliance.</li>
+
+          <li data-es>Seguimiento de costos y desempeño: combustible, peajes, CPM y rentabilidad por ruta.</li>
+          <li data-en style="display:none;">Performance tracking: fuel, tolls, CPM, and lane profitability.</li>
+
+          <li data-es>Comunicación clara: ETAs, actualizaciones y confirmaciones sin promesas vacías.</li>
+          <li data-en style="display:none;">Clear communication: ETAs, updates, confirmations—no overpromising.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 data-es>Enfoque en durabilidad y rendimiento</h3>
+        <h3 data-en style="display:none;">Built for durability and performance</h3>
+        <p data-es>
+          Nuestra operación se basa en principios simples: equipo resistente, planificación real y ejecución con
+          disciplina. Esto protege el servicio y la reputación del cliente.
+        </p>
+        <p data-en style="display:none;">
+          Our operation is built on simple principles: durable equipment, real planning, and disciplined execution.
+          This protects service levels and your reputation.
+        </p>
+        <p data-es>Si algo no se puede cumplir, se comunica a tiempo. Punto.</p>
+        <p data-en style="display:none;">If something can’t be met, we communicate early. Period.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVAILABILITY / LOADS (inspired by “load offers” + availability control) -->
+  <section id="disponibilidad">
+    <p class="section-label" data-es>Disponibilidad & coordinación</p>
+    <p class="section-label" data-en style="display:none;">Availability & coordination</p>
+
+    <h2 class="section-title" data-es>Disponibilidad controlada, respuesta rápida</h2>
+    <h2 class="section-title" data-en style="display:none;">Controlled availability, fast response</h2>
+
+    <div class="section-grid">
+      <article class="card">
+        <h3 data-es>Disponibilidad por ventanas</h3>
+        <h3 data-en style="display:none;">Availability by windows</h3>
+        <p data-es>
+          Manejamos disponibilidad por horas, jornadas o tiempo completo para responder con precisión y evitar
+          “sí” que terminan en retrasos.
+        </p>
+        <p data-en style="display:none;">
+          We manage availability by hours, shifts, or full-time windows—so we answer accurately and avoid “yes” that turns into delays.
+        </p>
+        <small data-es>Menos fricción · Más certeza</small>
+        <small data-en style="display:none;">Less friction · More certainty</small>
+      </article>
+
+      <article class="card">
+        <h3 data-es>Matching inteligente</h3>
+        <h3 data-en style="display:none;">Smarter matching</h3>
+        <p data-es>
+          Preferimos cargas y lanes donde podemos ejecutar consistentemente. La meta: servicio estable, no “one-off” caótico.
+        </p>
+        <p data-en style="display:none;">
+          We prefer loads and lanes where we can execute consistently. The goal: stable service—not chaotic one-offs.
+        </p>
+        <small data-es>Relaciones · Consistencia</small>
+        <small data-en style="display:none;">Relationships · Consistency</small>
+      </article>
+
+      <article class="card">
+        <h3 data-es>Proceso simple</h3>
+        <h3 data-en style="display:none;">Simple process</h3>
+        <p data-es>
+          Envíanos origen, destino, fechas, dimensiones/peso y tipo de carga. Respondemos en minutos con disponibilidad real.
+        </p>
+        <p data-en style="display:none;">
+          Send origin, destination, dates, dimensions/weight, and commodity. We reply fast with real availability.
+        </p>
+        <small data-es>Claro · Directo · Ejecutable</small>
+        <small data-en style="display:none;">Clear · Direct · Executable</small>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contacto">
-    <h2>Contacto</h2>
+    <p class="section-label" data-es>Contacto</p>
+    <p class="section-label" data-en style="display:none;">Contact</p>
+
+    <h2 class="section-title" data-es>Conversemos sobre rutas y capacidad</h2>
+    <h2 class="section-title" data-en style="display:none;">Let’s talk lanes and capacity</h2>
+
     <div class="contact-card">
-      <form name="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact" />
+      <div>
+        <h3 data-es>Información de empresa</h3>
+        <h3 data-en style="display:none;">Company info</h3>
 
-        <div>
-          <label for="nombre">Nombre / Empresa</label>
-          <input id="nombre" name="nombre" type="text" required />
+        <p class="contact-meta" data-es>
+          Envía detalles: origen, destino, fechas, peso/dimensiones y tipo de carga. Contestamos con disponibilidad real.
+        </p>
+        <p class="contact-meta" data-en style="display:none;">
+          Send details: origin, destination, dates, weight/dimensions, and commodity. We respond with real availability.
+        </p>
+
+        <div class="contact-grid">
+          <div>
+            <p class="contact-item-label">Company</p>
+            <p class="contact-item-value">HORIZON TRUCK LINE LLC</p>
+          </div>
+          <div>
+            <p class="contact-item-label" data-es>Base de operaciones</p>
+            <p class="contact-item-label" data-en style="display:none;">Base of operations</p>
+            <p class="contact-item-value">Las Vegas, Nevada · USA</p>
+          </div>
+          <div>
+            <p class="contact-item-label">Email</p>
+            <p class="contact-item-value">info@horizontruckline.com</p>
+          </div>
+          <div>
+            <p class="contact-item-label" data-es>Teléfono</p>
+            <p class="contact-item-label" data-en style="display:none;">Phone</p>
+            <p class="contact-item-value">+1 (000) 000-0000</p>
+          </div>
         </div>
+      </div>
 
-        <div>
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required />
-        </div>
+      <div>
+        <!-- Netlify Form ready -->
+        <form name="capacity" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="capacity" />
+          <p style="display:none">
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
 
-        <div>
-          <label for="detalle">Detalles de carga / ruta</label>
-          <textarea id="detalle" name="detalle" required></textarea>
-        </div>
+          <div>
+            <label for="nombre" data-es>Nombre / Empresa</label>
+            <label for="nombre" data-en style="display:none;">Name / Company</label>
+            <input id="nombre" name="name" type="text" autocomplete="name" required />
+          </div>
 
-        <button type="submit" class="btn-primary">Enviar mensaje</button>
-      </form>
+          <div>
+            <label for="email" data-es>Email</label>
+            <label for="email" data-en style="display:none;">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div>
+            <label for="detalle" data-es>Detalles de carga / ruta</label>
+            <label for="detalle" data-en style="display:none;">Load / lane details</label>
+            <textarea id="detalle" name="details" placeholder="Origin → Destination · Dates · Dimensions/Weight · Commodity" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary" style="margin-top: 0.2rem;">
+            <span data-es>Enviar mensaje</span>
+            <span data-en style="display:none;">Send message</span>
+          </button>
+
+          <p class="note" data-es>Formulario listo para Netlify Forms. En Netlify: Site settings → Forms → Notifications.</p>
+          <p class="note" data-en style="display:none;">Connected to Netlify Forms. In Netlify: Site settings → Forms → Notifications.</p>
+        </form>
+      </div>
     </div>
   </section>
 </main>
 
 <footer>
-  © <span id="year"></span> HORIZON TRUCK LINE LLC · Las Vegas, NV
+  <div class="footer-inner">
+    <div>
+      © <span id="year"></span> HORIZON TRUCK LINE LLC.
+      <span data-es>Todos los derechos reservados.</span>
+      <span data-en style="display:none;">All rights reserved.</span>
+    </div>
+    <div class="footer-right">
+      <span data-es>Operación responsable · Enfoque a largo plazo</span>
+      <span data-en style="display:none;">Responsible operation · Long-term focus</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span>Las Vegas, NV</span>
+    </div>
+  </div>
 </footer>
 
 <script>
+  // Dynamic year
   document.getElementById("year").textContent = new Date().getFullYear();
-</script>
 
+  // Language toggle ES / EN
+  const btnEs = document.getElementById("btn-es");
+  const btnEn = document.getElementById("btn-en");
+  const esElements = document.querySelectorAll("[data-es]");
+  const enElements = document.querySelectorAll("[data-en]");
+
+  function setLanguage(lang) {
+    const isEs = lang === "es";
+    esElements.forEach(el => el.style.display = isEs ? "" : "none");
+    enElements.forEach(el => el.style.display = isEs ? "none" : "");
+    btnEs.classList.toggle("active", isEs);
+    btnEn.classList.toggle("active", !isEs);
+  }
+
+  btnEs.addEventListener("click", () => setLanguage("es"));
+  btnEn.addEventListener("click", () => setLanguage("en"));
+  setLanguage("es");
+</script>
 </body>
 </html>
